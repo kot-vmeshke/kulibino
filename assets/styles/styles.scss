@@ -40,6 +40,7 @@ body {
 }
 main {
   flex: 1 1 100%;
+  background: var(--accent-color) url('../images/main-bg.jpg') no-repeat center / cover;
 }
 
 .container {
@@ -51,4 +52,6 @@ main {
 
 @import './header';
 @import './footer';
+@import './seo';
+@import './main-portfolio';
 

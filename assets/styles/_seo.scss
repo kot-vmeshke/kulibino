@@ -1,0 +1,17 @@
+.seo {
+  padding: 110px 0;
+  @include mobile {
+    padding: 50px 0;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--light-text);
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}
