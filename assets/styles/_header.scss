@@ -48,6 +48,7 @@
       width: 200px;
       background: var(--accent-color);
       transition: right 0.5s;
+      z-index: 10;
 
       &.js-opened {
         right: 0;

@@ -6,13 +6,24 @@ const handleMenu = () => {
 
   burgerButton.addEventListener('click', () => {
     menu.classList.toggle('js-opened');
-  })
-}
+  });
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   handleMenu();
 
-  const swiper = new Swiper('.swiper', {
+  const swiperHero = new Swiper('.hero__swiper', {
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const swiperPortfolio = new Swiper('.portfolio__container', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
@@ -37,4 +48,4 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
-})
+});

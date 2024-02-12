@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kulibino - Main</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./assets/styles/styles.css">  
+  <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
 
 <body>
@@ -42,32 +42,89 @@
   <!-- main -->
   <main class="main">
 
+    <!-- hero -->
+    <section class="hero">
+      <div class="swiper hero__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <!-- for mobile -->
+              <source srcset="./assets/images/hero/collection-craft-shopping-packets-with-sale-inscription.jpg"
+                media="(max-width: 600px)" />
+              <!-- for tablets -->
+              <source srcset="./assets/images/hero/collection-craft-shopping-packets-with-sale-inscription.jpg"
+                media="(max-width: 800px)" />
+              <!-- for desktop -->
+              <img src="./assets/images/hero/collection-craft-shopping-packets-with-sale-inscription.jpg" alt="">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <!-- for mobile -->
+              <source srcset="./assets/images/hero/front-view-packed-food-prepared-takeaway.jpg"
+                media="(max-width: 600px)" />
+              <!-- for tablets -->
+              <source srcset="./assets/images/hero/front-view-packed-food-prepared-takeaway.jpg"
+                media="(max-width: 800px)" />
+              <!-- for desktop -->
+              <img src="./assets/images/hero/front-view-packed-food-prepared-takeaway.jpg" alt="">
+            </picture>
+            <img src="./assets/images/hero/front-view-packed-food-prepared-takeaway.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <!-- for mobile -->
+              <source srcset="./assets/images/hero/main-slide.jpg" media="(max-width: 600px)" />
+              <!-- for tablets -->
+              <source srcset="./assets/images/hero/main-slide.jpg" media="(max-width: 800px)" />
+              <!-- for desktop -->
+              <img src="./assets/images/hero/main-slide.jpg" alt="">
+            </picture>
+            <img src="./assets/images/hero/main-slide.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <!-- for mobile -->
+              <source srcset="./assets/images/hero/pastel-color-paper-bag-group.jpg" media="(max-width: 600px)" />
+              <!-- for tablets -->
+              <source srcset="./assets/images/hero/pastel-color-paper-bag-group.jpg" media="(max-width: 800px)" />
+              <!-- for desktop -->
+              <img src="./assets/images/hero/pastel-color-paper-bag-group.jpg" alt="">
+            </picture>
+            <img src="./assets/images/hero/pastel-color-paper-bag-group.jpg" alt="">
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
     <!-- portfolio -->
     <section class="portfolio">
       <div class="container">
         <h2 class="portfolio__title">портфолио</h2>
         <div class="portfolio__container swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./assets/images/portfolio/photo_2023-08-25_08-00-03.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/portfolio/photo_2023-08-28_09-21-48.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/portfolio/photo_2023-09-03_12-00-05.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/portfolio/photo_2023-09-04_09-22-21 (2).jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/portfolio/photo_2023-09-07_07-55-48.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/portfolio/photo_2023-09-08_04-01-00.jpg" alt="">
-              </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/portfolio/photo_2023-08-25_08-00-03.jpg" alt="">
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide">
+              <img src="./assets/images/portfolio/photo_2023-08-28_09-21-48.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/portfolio/photo_2023-09-03_12-00-05.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/portfolio/photo_2023-09-04_09-22-21 (2).jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/portfolio/photo_2023-09-07_07-55-48.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/portfolio/photo_2023-09-08_04-01-00.jpg" alt="">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
         <a href="./pages/portfolio.html" class="portfolio__link">Посмотреть все</a>
       </div>
