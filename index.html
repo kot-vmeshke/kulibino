@@ -99,6 +99,98 @@
       </div>
     </section>
 
+    <!-- price -->
+    <section class="price">
+      <div class="container price__container">
+        <h2 class="price__title">рассчитать стоимость</h2>
+        <div class="price__type">
+          <input type="radio" name="type" id="pvd" value="pvd">
+          <label for="pvd" class="price__type-label">Рейтер</label>
+          <input type="radio" name="type" id="paper" value="paper">
+          <label for="paper" class="price__type-label">Бумага</label>
+          <input type="radio" name="type" id="post" value="post" checked>
+          <label for="post" class="price__type-label">Курьер</label>
+          <input type="radio" name="type" id="slide" value="slide">
+          <label for="slide" class="price__type-label">
+            Слайдер
+            <div class="sliders">виды слайдеров</div>
+          </label>
+        </div>
+        <div class="price__inputs">
+          <label for="" class="price__label">
+            Размер пакета
+            <select name="" id="">
+              <option value="" selected disabled>Выберите размер</option>
+              <option value="35x45">35x45</option>
+              <option value="40x50">40x50</option>
+            </select>
+          </label>
+          <label for="" class="price__label">
+            Количество цветов печати
+            <select name="" id="">
+              <option value="" selected disabled>Количество цветов</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </label>
+          <div class="price__colors">
+            <p class="price__label">Цвет пакета</p>
+            <div class="price__colors-wrapper">
+              <input type="radio" name="color" id="white" checked>
+              <label for="white" class="price__color price__color_while">
+                <span></span>
+              </label>
+              <input type="radio" name="color" id="black">
+              <label for="black" class="price__color price__color_black">
+                <span></span>
+              </label>
+              <input type="radio" name="color" id="transparent">
+              <label for="transparent" class="price__color price__color_transparent">
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <label for="" class="price__label">
+            Тираж
+            <select name="" id="">
+              <option value="" selected disabled>Тираж</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+          </label>
+        </div>
+        <div class="price__img">
+          <img src="./assets/images/post-bag.png" alt="">
+        </div>
+        <div class="price__count">
+          <p class="price__count-all">$1500 <span class="price__count-one">($50/шт)</span></p>
+          <a href="./pages/price.html" class="price__link" target="_blank">
+            Подробнее
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_36_747)">
+                <path
+                  d="M11.2104 0C10.8073 0 10.4417 0.24375 10.2854 0.61875C10.1292 0.99375 10.2167 1.42188 10.5011 1.70938L11.7948 3L6.5042 8.29375C6.11357 8.68437 6.11357 9.31875 6.5042 9.70938C6.89482 10.1 7.5292 10.1 7.91982 9.70938L13.2104 4.41563L14.5042 5.70937C14.7917 5.99687 15.2198 6.08125 15.5948 5.925C15.9698 5.76875 16.2136 5.40625 16.2136 5V1C16.2136 0.446875 15.7667 0 15.2136 0H11.2104ZM2.71045 1C1.3292 1 0.210449 2.11875 0.210449 3.5V13.5C0.210449 14.8813 1.3292 16 2.71045 16H12.7104C14.0917 16 15.2104 14.8813 15.2104 13.5V10C15.2104 9.44687 14.7636 9 14.2104 9C13.6573 9 13.2104 9.44687 13.2104 10V13.5C13.2104 13.775 12.9854 14 12.7104 14H2.71045C2.43545 14 2.21045 13.775 2.21045 13.5V3.5C2.21045 3.225 2.43545 3 2.71045 3H6.21045C6.76357 3 7.21045 2.55312 7.21045 2C7.21045 1.44687 6.76357 1 6.21045 1H2.71045Z"
+                  fill="currentColor" />
+              </g>
+              <defs>
+                <clipPath id="clip0_36_747">
+                  <rect width="16" height="16" fill="currentColor" transform="translate(0.210449)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="price__controls">
+          <button class="price__button price__button_fill" id="create-order">Заказать</button>
+          <button class="price__button price__button_outline" id="send-mail">Отправить просчет на почту</button>
+          <button class="price__button price__button_outline" id="custom-order">
+            Ничего не подошло?
+            <span>индивидуальное изготовление</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- portfolio -->
     <section class="portfolio">
       <div class="container">

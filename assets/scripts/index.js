@@ -9,13 +9,24 @@ const handleMenu = () => {
   });
 };
 
+const choiceType = () => {
+  const slidesrButton = document.querySelector('label[for="slide"]');
+  const slidersPanel = slidesrButton.querySelector('.sliders');
+
+  slidesrButton.addEventListener('mouseenter', () => {
+    slidersPanel.style.display = 'block';
+  })
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   handleMenu();
+  choiceType();
 
   const swiperHero = new Swiper('.hero__swiper', {
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -48,4 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+
 });
