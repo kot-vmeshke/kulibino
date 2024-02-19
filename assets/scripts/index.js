@@ -37,12 +37,34 @@ const choiceType = () => {
     slidesrButton.childNodes[0].textContent = selectedType;
     slidersPanel.style.display = 'none';
   });
+};
 
+const handleModal = () => {
+  const buttonCloseModal = document.querySelector('.modal__close');
+  const buttonOpenModal = document.querySelector('#custom-order');
+  const overlay = document.querySelector('.overlay');
+
+  buttonOpenModal.addEventListener('click', () => {
+    overlay.style.display = 'block';
+  });
+
+  const closeModal = () => {
+    overlay.style.display = 'none';
+  };
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      closeModal();
+    }
+  });
+
+  buttonCloseModal.addEventListener('click', closeModal);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   handleMenu();
   choiceType();
+  handleModal();
 
   const swiperHero = new Swiper('.hero__swiper', {
     autoplay: {

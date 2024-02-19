@@ -818,4 +818,32 @@ main {
   .footer__contacts-item {
     font-size: 14px;
   }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  padding: 150px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  display: none;
+}
+
+.modal {
+  position: relative;
+  padding: 40px;
+  background: var(--light-text);
+  border-radius: 16px;
+}
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid var(--accent-color);
+  font-weight: 600;
 }/*# sourceMappingURL=styles.css.map */
