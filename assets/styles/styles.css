@@ -221,6 +221,11 @@ main {
   margin-top: -170px;
   z-index: 9;
 }
+@media (max-width: 1000px) {
+  .price {
+    margin-top: -60px;
+  }
+}
 .price__container {
   display: grid;
   grid-template-columns: repeat(3, calc((100% - 60px) / 3));
@@ -232,6 +237,17 @@ main {
   background: var(--light-text);
   box-shadow: 0 2px 24px 9px rgba(0, 0, 0, 0.07);
 }
+@media (max-width: 1000px) {
+  .price__container {
+    grid-template-columns: repeat(2, calc((100% - 30px) / 2));
+    padding: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .price__container {
+    grid-template-columns: 1fr;
+  }
+}
 .price__title {
   grid-column: span 3;
   margin-bottom: 30px;
@@ -241,13 +257,46 @@ main {
   text-align: center;
   color: var(--dark-text);
 }
+@media (max-width: 1000px) {
+  .price__title {
+    grid-column: span 2;
+    margin-bottom: 36px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .price__title {
+    grid-column: span 1;
+  }
+}
 .price__type {
+  position: relative;
   grid-column: span 3;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 36px;
   margin-bottom: 60px;
+}
+@media (max-width: 1000px) {
+  .price__type {
+    grid-column: span 2;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .price__type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 1;
+    margin-bottom: 32px;
+  }
+  .price__type > .price__type-label:nth-child(2), .price__type > .price__type-label:nth-child(6) {
+    justify-self: end;
+  }
+  .price__type > .price__type-label:nth-child(4), .price__type > .price__type-label:nth-child(8) {
+    justify-self: start;
+  }
 }
 .price__type input {
   display: none;
@@ -263,7 +312,16 @@ main {
   height: 142px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+  background: var(--light-text);
+  text-align: center;
+  padding: 10px;
   transition: 0.3s;
+}
+@media (max-width: 1000px) {
+  .price__type-label {
+    width: 100px;
+    height: 100px;
+  }
 }
 .price__inputs {
   grid-column: span 2;
@@ -271,6 +329,12 @@ main {
   grid-template-columns: repeat(2, calc((100% - 30px) / 2));
   gap: 20px 30px;
   align-content: start;
+}
+@media (max-width: 1000px) {
+  .price__inputs {
+    grid-column: 1/2;
+    grid-template-columns: 1fr;
+  }
 }
 .price__label {
   display: flex;
@@ -304,15 +368,43 @@ main {
   align-items: center;
   gap: 12px;
 }
+@media (max-width: 1000px) {
+  .price__count {
+    padding-top: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .price__count {
+    padding-top: 32px;
+    grid-column: 1/2;
+  }
+}
 .price__count-all {
   font-weight: 500;
   font-size: 73px;
   color: var(--dark-bg);
 }
+@media (max-width: 1000px) {
+  .price__count-all {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .price__count-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .price__count-one {
   font-weight: 400;
   font-size: 45px;
   color: var(--dark-bg);
+}
+@media (max-width: 1000px) {
+  .price__count-one {
+    font-size: 35px;
+  }
 }
 .price__link {
   display: flex;
@@ -338,6 +430,17 @@ main {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media (max-width: 1000px) {
+  .price__img {
+    grid-row: span 1;
+  }
+}
+@media (max-width: 768px) {
+  .price__img {
+    grid-row: auto;
+    margin-top: 32px;
+  }
+}
 .price__controls {
   grid-column: span 3;
   display: flex;
@@ -346,27 +449,57 @@ main {
   margin-top: 60px;
   align-self: end;
 }
+@media (max-width: 1000px) {
+  .price__controls {
+    margin-top: 40px;
+    grid-column: span 2;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .price__controls {
+    grid-column: span 1;
+  }
+}
 .price__button {
+  position: relative;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
   max-width: 280px;
+  min-height: 63px;
   padding: 12px;
   border-radius: 12px;
   border: 2px solid var(--accent-color);
   font-weight: 600;
   font-size: 16px;
+  transition: 0.5s linear;
 }
 .price__button_fill {
   margin-right: auto;
   color: var(--light-text);
   background: var(--accent-color);
 }
+.price__button_fill:hover {
+  border: 2px solid #ff710b;
+  background: #ff710b;
+}
+@media (max-width: 1000px) {
+  .price__button_fill {
+    margin-right: 0;
+  }
+}
 .price__button_outline {
   color: var(--dark-bg);
   background: var(--light-text);
+}
+.price__button_outline:hover {
+  border: 2px solid #ff710b;
+  background: #ffefe5;
 }
 .price__button span {
   font-weight: 400;
@@ -414,24 +547,50 @@ main {
 }
 
 .sliders {
-  display: none;
-}
-
-label[for=slide] {
-  position: relative;
-}
-label[for=slide] .sliders {
   position: absolute;
   top: calc(100% + 20px);
+  left: calc(50% + 97px);
+  display: none;
+  gap: 20px;
   padding: 20px;
-  color: var(--light-text);
+  border-radius: 16px;
   background: var(--accent-color);
+}
+@media (max-width: 1000px) {
+  .sliders {
+    left: calc(50% + 50px);
+  }
+}
+@media (max-width: 768px) {
+  .sliders {
+    left: calc(50% - 131px);
+  }
+}
+.sliders::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-top: 12px solid transparent;
+  border-left: 12px solid var(--accent-color);
+}
+.sliders::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: 50%;
+  width: 12px;
+  height: 12px;
+  border-top: 12px solid transparent;
+  border-right: 12px solid var(--accent-color);
 }
 
 .portfolio {
   padding-top: 90px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .portfolio {
     padding-top: 60px;
   }
@@ -444,7 +603,7 @@ label[for=slide] .sliders {
   text-align: center;
   color: var(--light-text);
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .portfolio__title {
     margin-bottom: 36px;
     font-size: 32px;
@@ -496,6 +655,8 @@ label[for=slide] .sliders {
   opacity: 1;
 }
 .portfolio__link {
+  position: relative;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -512,13 +673,13 @@ label[for=slide] .sliders {
   transition: 0.5s;
 }
 .portfolio__link:hover {
-  background: rgba(255, 255, 255, 0.77);
+  background: #ffefe5;
 }
 
 .seo {
   padding: 110px 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .seo {
     padding: 50px 0;
   }
@@ -529,7 +690,7 @@ label[for=slide] .sliders {
   font-size: 16px;
   color: var(--light-text);
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .seo__text {
     font-size: 12px;
   }
@@ -539,7 +700,7 @@ label[for=slide] .sliders {
   padding: 60px 0;
   background: var(--dark-bg);
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer {
     padding: 50px 0;
   }
@@ -551,7 +712,7 @@ label[for=slide] .sliders {
   gap: 40px;
   margin-bottom: 82px;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer__top {
     flex-direction: column;
     align-items: center;
@@ -571,12 +732,12 @@ label[for=slide] .sliders {
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .footer__logo {
     width: 100px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer__logo {
     margin-bottom: 0;
   }
@@ -586,13 +747,13 @@ label[for=slide] .sliders {
   font-size: 16px;
   color: var(--light-text);
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .footer__company-descr {
     max-width: 200px;
     font-size: 12px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer__company-descr {
     display: none;
   }
@@ -604,7 +765,7 @@ label[for=slide] .sliders {
   gap: 40px;
   list-style: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer__nav-list {
     gap: 20px;
   }
@@ -639,7 +800,7 @@ label[for=slide] .sliders {
   gap: 20px 56px;
   flex-wrap: wrap;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer__contacts {
     gap: 20px 40px;
   }
@@ -653,7 +814,7 @@ label[for=slide] .sliders {
   font-size: 20px;
   color: var(--light-text);
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer__contacts-item {
     font-size: 14px;
   }

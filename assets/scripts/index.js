@@ -11,13 +11,34 @@ const handleMenu = () => {
 
 const choiceType = () => {
   const slidesrButton = document.querySelector('label[for="slide"]');
-  const slidersPanel = slidesrButton.querySelector('.sliders');
+  const slidersPanel = document.querySelector('.sliders');
+  const types = document.querySelectorAll('[name="type"]');
 
-  slidesrButton.addEventListener('mouseenter', () => {
-    slidersPanel.style.display = 'block';
-  })
+  if (document.documentElement.clientWidth >= 1000) {
+    slidesrButton.addEventListener('mouseenter', () => {
+      slidersPanel.style.display = 'flex';
+    });
+  }
 
-}
+  slidesrButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    slidersPanel.style.display = 'flex';
+    slidersPanel.dataset.open = 'open';
+  });
+
+  slidersPanel.addEventListener('click', (e) => {
+    e.stopPropagation();
+    let selectedType;
+    types.forEach((item) => {
+      if (item.checked) {
+        selectedType = item.dataset.type;
+      }
+    });
+    slidesrButton.childNodes[0].textContent = selectedType;
+    slidersPanel.style.display = 'none';
+  });
+
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   handleMenu();
@@ -59,5 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
-
 });
